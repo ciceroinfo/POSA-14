@@ -1,7 +1,6 @@
 package edu.vuum.mocca;
 
 import java.util.concurrent.locks.ReentrantReadWriteLock;
-import java.util.concurrent.locks.Lock;
 
 /**
  * @class SimpleAtomicLong
@@ -20,9 +19,6 @@ class SimpleAtomicLong
     /**
      * The ReentrantReadWriteLock used to serialize access to mValue.
      */
-
-    // TODO -- you fill in here by replacing the null with an
-    // initialization of ReentrantReadWriteLock.
     private final ReentrantReadWriteLock mRWLock = new ReentrantReadWriteLock();
 
     /**
