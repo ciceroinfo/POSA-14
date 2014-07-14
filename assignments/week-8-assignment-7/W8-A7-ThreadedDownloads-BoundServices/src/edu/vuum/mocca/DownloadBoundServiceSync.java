@@ -38,21 +38,20 @@ public class DownloadBoundServiceSync extends Service {
      * Pattern
      */
     DownloadCall.Stub mDownloadCallImpl = new DownloadCall.Stub() {
-            /**
-             * Download the image at the given Uri and return a
-             * pathname to the file on the Android file system.
-             * 
-             * Use the methods defined in DownloadUtils for code
-             * brevity.
-             */
-            @Override
-            public String downloadImage(Uri uri) throws RemoteException {
-                // TODO You fill in here to replace the null and
-                // download the file using the appropriate helper
-                // method in DownloadUtils and then return the
-                // pathname back to the client.
-                return DownloadUtils.downloadFile(getBaseContext(), uri);
-            }
+		/**
+		 * Download the image at the given Uri and return a pathname to the file
+		 * on the Android file system.
+		 * 
+		 * Use the methods defined in DownloadUtils for code brevity.
+		 */
+		@Override
+		public String downloadImage(Uri uri) throws RemoteException {
+			// TODO You fill in here to replace the null and
+			// download the file using the appropriate helper
+			// method in DownloadUtils and then return the
+			// pathname back to the client.
+			return DownloadUtils.downloadFile(getApplicationContext(), uri);
+		}
 	};
 	
     /**

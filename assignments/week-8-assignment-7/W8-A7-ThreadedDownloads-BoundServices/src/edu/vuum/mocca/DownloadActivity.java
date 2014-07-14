@@ -152,7 +152,7 @@ public class DownloadActivity extends DownloadBase {
 					}
 				};
 				
-				displayRunnable.run();
+				runOnUiThread(displayRunnable);
             }
         };
      
@@ -172,10 +172,8 @@ public class DownloadActivity extends DownloadBase {
         	try {
 				displayBitmap(mDownloadCall.downloadImage(uri));
 			} catch (RemoteException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-//        	startService(DownloadBoundServiceSync.makeIntent(this));
             break;
 
         case R.id.bound_async_button:
@@ -185,10 +183,8 @@ public class DownloadActivity extends DownloadBase {
         	try {
 				mDownloadRequest.downloadImage(uri, mDownloadCallback);
 			} catch (RemoteException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-//        	startService(DownloadBoundServiceAsync.makeIntent(this));
             break;
         }
     }

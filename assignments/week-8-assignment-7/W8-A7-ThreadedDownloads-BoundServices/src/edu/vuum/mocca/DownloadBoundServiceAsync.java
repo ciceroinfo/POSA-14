@@ -52,7 +52,7 @@ public class DownloadBoundServiceAsync extends Service{
                 // the appropriate helper method in DownloadUtils and
                 // then send the pathname back to the client via the
                 // callback object.
-            	DownloadUtils.downloadFile(getBaseContext(), uri);
+            	callback.sendPath(DownloadUtils.downloadFile(getApplicationContext(), uri));
             }
 		
 	};
